@@ -2,7 +2,7 @@ Summary:	Midi file player Plug-In for xmms
 Summary(pl):	Wtyczka odtwarzaj±ca pliki midi
 Name:		xmms-input-midi
 Version:	0.03
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Sound
 Source0:	http://ban.joh.cam.ac.uk/~cr212/xmms-midi/xmms-midi-%{version}.tar.gz
@@ -11,12 +11,11 @@ URL:		http://ban.joh.cam.ac.uk/~cr212/xmms-midi/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
+BuildRequires:	rpmbuild(macros) >= 1.125
 BuildRequires:	xmms-devel
 Requires:	TiMidity++-instruments
 Requires:	xmms
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		plugin_dir	%(xmms-config --input-plugin-dir)
 
 %description
 Midi file player Plug-In for xmms.
@@ -47,10 +46,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	xmmsinputdir=%{plugin_dir}
+	xmmsinputdir=%{xmms_input_plugindir}
 
 # useless
-rm -f $RPM_BUILD_ROOT%{plugin_dir}/*.la
+rm -f $RPM_BUILD_ROOT%{xmms_input_plugindir}/*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -58,4 +57,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog README TODO
-%attr(755,root,root) %{plugin_dir}/*.so
+%attr(755,root,root) %{xmms_input_plugindir}/*.so
