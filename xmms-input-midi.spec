@@ -1,5 +1,5 @@
-Summary:	Midi file player Plug-In for xmms
-Summary(pl):	Wtyczka odtwarzaj±ca pliki midi
+Summary:	Midi file player Plug-In for XMMS
+Summary(pl):	Wtyczka wej¶ciowa dla XMMS-a odtwarzaj±ca pliki midi
 Name:		xmms-input-midi
 Version:	0.03
 Release:	3
@@ -17,10 +17,10 @@ Requires:	TiMidity++-instruments
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Midi file player Plug-In for xmms.
+Midi file player Plug-In for XMMS.
 
 %description -l pl
-Wtyczka odtwarzaj±ca pliki midi.
+Wtyczka wej¶ciowa dla XMMS-a odtwarzaj±ca pliki midi.
 
 %prep
 %setup -q -n xmms-midi-%{version}
