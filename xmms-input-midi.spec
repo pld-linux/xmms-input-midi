@@ -27,8 +27,16 @@ Wtyczka odtwarzaj±ca pliki midi.
 %prep
 %setup -q -n xmms-midi-%{version}
 
+sed -e "s@AC_INIT.*@AC_INIT(xmms-midi, %{version})\nAM_INIT_AUTOMAKE@" \
+	configure.in > configure.in.tmp
+mv -f configure.in.tmp configure.in
+
 %build
-%configure2_13 \
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__automake}
+%configure \
 	--disable-static
 
 %{__make} \
