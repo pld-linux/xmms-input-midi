@@ -2,7 +2,7 @@ Summary:	Midi file player Plug-In for XMMS
 Summary(pl):	Wtyczka wej¶ciowa dla XMMS-a odtwarzaj±ca pliki midi
 Name:		xmms-input-midi
 Version:	0.03
-Release:	3
+Release:	4
 License:	GPL
 Group:		X11/Applications/Sound
 Source0:	http://ban.joh.cam.ac.uk/~cr212/xmms-midi/xmms-midi-%{version}.tar.gz
@@ -14,6 +14,8 @@ BuildRequires:	libtool
 BuildRequires:	rpmbuild(macros) >= 1.125
 BuildRequires:	xmms-devel
 Requires:	TiMidity++-instruments
+# TiMidity++ for /etc/timidity.cfg
+Requires:	TiMidity++
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
