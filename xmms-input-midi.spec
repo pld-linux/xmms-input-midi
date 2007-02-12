@@ -1,5 +1,5 @@
 Summary:	Midi file player Plug-In for XMMS
-Summary(pl.UTF-8):   Wtyczka wejściowa dla XMMS-a odtwarzająca pliki midi
+Summary(pl.UTF-8):	Wtyczka wejściowa dla XMMS-a odtwarzająca pliki midi
 Name:		xmms-input-midi
 Version:	0.03
 Release:	4
