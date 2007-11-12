@@ -2,7 +2,7 @@ Summary:	Midi file player Plug-In for XMMS
 Summary(pl.UTF-8):	Wtyczka wejściowa dla XMMS-a odtwarzająca pliki midi
 Name:		xmms-input-midi
 Version:	0.03
-Release:	4
+Release:	5
 License:	GPL
 Group:		X11/Applications/Sound
 Source0:	http://ban.joh.cam.ac.uk/~cr212/xmms-midi/xmms-midi-%{version}.tar.gz
@@ -58,4 +58,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog README TODO
-%attr(755,root,root) %{xmms_input_plugindir}/*.so
+%attr(755,root,root) %{xmms_input_plugindir}/*.so*
